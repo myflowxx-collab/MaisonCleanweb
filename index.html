@@ -670,7 +670,7 @@
                         Solicita tu presupuesto sin compromiso
                     </h2>
                     <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Completa este breve cuestionario para que nuestro equipo técnico pueda evaluar tus necesidades. Una vez enviado, podrás agendar tu limpieza y beneficiarte de nuestras tarifas especiales para Madrid.
+                        Completa este breve cuestionario para que nuestro equipo técnico pueda evaluar tus necesidades. Una vez enviado, tus datos quedarán registrados y podrás agendar tu limpieza directamente por WhatsApp.
                     </p>
 
                     <div class="space-y-4 pt-4">
@@ -754,24 +754,24 @@
                             <p class="font-bold text-gold uppercase tracking-wider text-[11px] mb-1">
                                 <i class="fa-solid fa-shield-halved mr-1"></i> Información básica sobre Protección de Datos
                             </p>
-                            <p><strong>Responsable:</strong> Maison Clean / [Nombre o Razón Social del Titular]</p>
-                            <p><strong>Finalidad:</strong> Gestionar la solicitud de información y reserva de servicios a través de WhatsApp.</p>
+                            <p><strong>Responsable:</strong> Jaime Hernández Muela (Maison Clean)</p>
+                            <p><strong>Finalidad:</strong> Registrar la solicitud de reserva e iniciar la atención personalizada.</p>
                             <p><strong>Legitimación:</strong> Consentimiento del interesado (art. 6.1.a RGPD).</p>
-                            <p><strong>Destinatarios:</strong> No se cederán datos a terceros, salvo obligación legal.</p>
-                            <p><strong>Derechos:</strong> Acceder, rectificar y suprimir los datos, explicados en la <button type="button" onclick="openLegalModal('privacyModal')" class="text-gold underline hover:text-goldLight">Política de Privacidad</button>.</p>
+                            <p><strong>Destinatarios:</strong> Atención directa a través de WhatsApp. No se ceden datos a terceros.</p>
+                            <p><strong>Derechos:</strong> Acceder, rectificar y suprimir los datos explicados en la <button type="button" onclick="openLegalModal('privacyModal')" class="text-gold underline hover:text-goldLight">Política de Privacidad</button>.</p>
                         </div>
 
                         <div class="flex items-start space-x-3 pt-1">
                             <input type="checkbox" id="privacyConsent" required class="mt-1 h-4 w-4 text-gold rounded border-gold/30 bg-primaryCard focus:ring-gold">
                             <label for="privacyConsent" class="text-xs text-slate-300 leading-snug cursor-pointer">
-                                He leído y acepto la <button type="button" onclick="openLegalModal('privacyModal')" class="text-gold underline hover:text-goldLight font-bold">Política de Privacidad</button> y doy mi consentimiento para el tratamiento de mis datos. *
+                                He leído y acepto la <button type="button" onclick="openLegalModal('privacyModal')" class="text-gold underline hover:text-goldLight font-bold">Política de Privacidad</button> y doy mi consentimiento para el registro de mis datos. *
                             </label>
                         </div>
 
                         <div class="pt-2">
-                            <button type="submit" class="btn-interactive w-full py-4 bg-whatsapp hover:bg-emerald-600 text-white font-extrabold text-xs uppercase tracking-widest rounded-xl transition-all shadow-lg flex items-center justify-center space-x-2">
+                            <button id="submitBtn" type="submit" class="btn-interactive w-full py-4 bg-whatsapp hover:bg-emerald-600 text-white font-extrabold text-xs uppercase tracking-widest rounded-xl transition-all shadow-lg flex items-center justify-center space-x-2">
                                 <i class="fa-brands fa-whatsapp text-xl"></i>
-                                <span>Enviar y Confirmar por WhatsApp</span>
+                                <span>Enviar, Registrar y Confirmar por WhatsApp</span>
                             </button>
                         </div>
                     </form>
@@ -780,9 +780,9 @@
                         <div class="w-16 h-16 bg-gold/20 text-gold rounded-full flex items-center justify-center text-3xl shadow-sm border border-gold/40">
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
-                        <h4 class="text-2xl font-extrabold text-white font-serif">¡Solicitud Procesada!</h4>
+                        <h4 class="text-2xl font-extrabold text-white font-serif">¡Solicitud Registrada Exitosamente!</h4>
                         <p class="text-slate-300 text-sm max-w-sm">
-                            Estamos abriendo tu WhatsApp para concretar fecha y hora del servicio. Si no se abre automáticamente, haz clic en el botón de abajo.
+                            Tus datos han quedado almacenados de forma segura en el sistema de Maison Clean. Abrimos WhatsApp para ultimar detalles.
                         </p>
                         <a id="fallbackWaBtn" href="#" target="_blank" class="btn-interactive px-6 py-3 bg-whatsapp text-white text-xs font-extrabold uppercase tracking-widest rounded-xl shadow inline-flex items-center space-x-2">
                             <i class="fa-brands fa-whatsapp text-lg"></i>
@@ -854,6 +854,10 @@
                         <span>Teléfono / WhatsApp: <a href="tel:+34626809558" class="font-bold text-slate-200 hover:text-gold">+34 626 809 558</a></span>
                     </p>
                     <p class="flex items-center">
+                        <i class="fa-solid fa-envelope text-gold mr-2"></i>
+                        <span>Email: <a href="mailto:jaimehmuela@gmail.com" class="font-bold text-slate-200 hover:text-gold">jaimehmuela@gmail.com</a></span>
+                    </p>
+                    <p class="flex items-center">
                         <i class="fa-solid fa-location-dot text-gold mr-2"></i>
                         <span>Servicio a domicilio en todo Madrid</span>
                     </p>
@@ -880,7 +884,7 @@
                 <h3 class="text-base font-bold text-white font-serif">Gestión de Cookies y Privacidad</h3>
             </div>
             <p class="text-xs text-slate-300 leading-relaxed">
-                Utilizamos cookies propias y de terceros necesarias para permitir el funcionamiento técnico de la web. Además, con su consentimiento, podemos utilizar cookies analíticas y publicitarias para mejorar su experiencia y medir el uso del sitio.
+                Utilizamos cookies propias y de terceros necesarias para permitir el funcionamiento técnico de la web. Además, con su consentimiento, podemos utilizar cookies analíticas y publicitarias para mejorar su experiencia.
             </p>
             <div class="flex flex-col sm:flex-row gap-2 pt-2">
                 <button type="button" onclick="CookieManager.acceptAll()" class="btn-interactive px-4 py-2.5 gold-gradient-bg text-primary font-extrabold text-xs uppercase tracking-wider rounded-xl text-center shadow">
@@ -958,7 +962,6 @@
         </div>
     </div>
 
-
     <!-- Modal 1: Aviso Legal -->
     <div id="noticeModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-primaryCard border border-gold/40 max-w-3xl w-full rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
@@ -970,27 +973,17 @@
             </div>
             <div class="p-6 overflow-y-auto legal-scroll text-xs text-slate-300 space-y-4 leading-relaxed">
                 <h4 class="font-bold text-gold text-sm font-serif">1. Datos Identificativos (LSSI-CE)</h4>
-                <p>
-                    En cumplimiento con el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se facilitan los siguientes datos identificativos:
-                </p>
+                <p>En cumplimiento con el artículo 10 de la Ley 34/2002 (LSSI-CE), se facilitan los siguientes datos:</p>
                 <ul class="list-disc pl-5 space-y-1">
                     <li><strong>Denominación Comercial:</strong> Maison Clean</li>
-                    <li><strong>Titular / Razón Social:</strong> [Nombre o Razón Social del Titular / Empresa]</li>
-                    <li><strong>NIF/CIF:</strong> [NIF/CIF del Titular]</li>
-                    <li><strong>Domicilio Social:</strong> [Dirección Postal Completa en Madrid, España]</li>
+                    <li><strong>Titular:</strong> Jaime Hernández Muela</li>
+                    <li><strong>NIF / DNI:</strong> 47293885C</li>
+                    <li><strong>Domicilio Social:</strong> Calle Cerro de la Carrasqueta 63, Madrid, España</li>
                     <li><strong>Teléfono de contacto:</strong> +34 626 809 558</li>
-                    <li><strong>Correo electrónico:</strong> [Correo Electrónico de Contacto]</li>
+                    <li><strong>Correo electrónico:</strong> jaimehmuela@gmail.com</li>
                 </ul>
-
-                <h4 class="font-bold text-gold text-sm font-serif pt-2">2. Objeto y Ámbito de Aplicación</h4>
-                <p>
-                    El presente Aviso Legal regula el acceso, navegación y uso del sitio web de Maison Clean. La utilización del sitio web atribuye la condición de usuario e implica la aceptación plena de todas las disposiciones incluidas en este Aviso Legal.
-                </p>
-
-                <h4 class="font-bold text-gold text-sm font-serif pt-2">3. Propiedad Intelectual e Industrial</h4>
-                <p>
-                    Todos los contenidos de la web (textos, fotografías, gráficos, imágenes, iconos, tecnología, software, marcas, logotipos) son propiedad de Maison Clean o de sus licenciantes.
-                </p>
+                <h4 class="font-bold text-gold text-sm font-serif pt-2">2. Objeto</h4>
+                <p>El presente Aviso Legal regula el acceso, navegación y uso del sitio web de Maison Clean.</p>
             </div>
             <div class="p-4 border-t border-gold/20 bg-primary flex justify-end">
                 <button type="button" onclick="closeLegalModal('noticeModal')" class="px-5 py-2 border border-gold/40 text-gold hover:bg-gold hover:text-primary transition-colors text-xs font-bold uppercase rounded-xl">
@@ -1010,32 +1003,13 @@
                 </button>
             </div>
             <div class="p-6 overflow-y-auto legal-scroll text-xs text-slate-300 space-y-4 leading-relaxed">
-                <p>
-                    De conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), le informamos sobre cómo tratamos sus datos personales en Maison Clean.
-                </p>
-
+                <p>De conformidad con el Reglamento (UE) 2016/679 (RGPD) y la LOPDGDD 3/2018, le informamos sobre el tratamiento de sus datos personales en Maison Clean.</p>
                 <h4 class="font-bold text-gold text-sm font-serif pt-2">1. Responsable del Tratamiento</h4>
-                <ul class="list-disc pl-5 space-y-1">
-                    <li><strong>Identidad:</strong> Maison Clean / [Nombre o Razón Social del Titular]</li>
-                    <li><strong>NIF/CIF:</strong> [NIF/CIF del Titular]</li>
-                    <li><strong>Dirección:</strong> [Dirección Postal Completa en Madrid, España]</li>
-                    <li><strong>Email de contacto de Privacidad:</strong> [Correo Electrónico de Contacto]</li>
-                </ul>
-
-                <h4 class="font-bold text-gold text-sm font-serif pt-2">2. Finalidad y Datos Tratados</h4>
-                <p>
-                    Tratamos la información proporcionada para atender solicitudes de presupuesto y gestionar la programación de servicios de limpieza a domicilio a través de WhatsApp.
-                </p>
-
-                <h4 class="font-bold text-gold text-sm font-serif pt-2">3. Legitimación del Tratamiento</h4>
-                <p>
-                    La base legal es el <strong>consentimiento expreso del interesado</strong> (artículo 6.1.a del RGPD), prestado al enviar la solicitud de reserva.
-                </p>
-
-                <h4 class="font-bold text-gold text-sm font-serif pt-2">4. Ejercicio de Derechos</h4>
-                <p>
-                    El usuario puede ejercer en cualquier momento sus derechos de <strong>Acceso, Rectificación, Supresión, Limitación, Oposición y Portabilidad</strong> dirigiendo un correo electrónico a <strong>[Correo Electrónico de Contacto]</strong>.
-                </p>
+                <p><strong>Titular:</strong> Jaime Hernández Muela (Maison Clean)<br><strong>NIF:</strong> 47293885C<br><strong>Domicilio:</strong> Calle Cerro de la Carrasqueta 63, Madrid, España<br><strong>Email:</strong> jaimehmuela@gmail.com</p>
+                <h4 class="font-bold text-gold text-sm font-serif pt-2">2. Finalidad y Conservación</h4>
+                <p>Gestionar la atención de solicitudes de presupuesto e higienización textil recibidas a través del formulario web para entablar contacto mediante WhatsApp o teléfono. Los datos se conservarán el tiempo estrictamente necesario para la prestación del servicio.</p>
+                <h4 class="font-bold text-gold text-sm font-serif pt-2">3. Ejercicio de Derechos</h4>
+                <p>Puede ejercitar sus derechos de acceso, rectificación, supresión, limitación y oposición enviando una solicitud por escrito adjuntando copia de su DNI a <strong>jaimehmuela@gmail.com</strong>.</p>
             </div>
             <div class="p-4 border-t border-gold/20 bg-primary flex justify-end">
                 <button type="button" onclick="closeLegalModal('privacyModal')" class="px-5 py-2 border border-gold/40 text-gold hover:bg-gold hover:text-primary transition-colors text-xs font-bold uppercase rounded-xl">
@@ -1055,33 +1029,7 @@
                 </button>
             </div>
             <div class="p-6 overflow-y-auto legal-scroll text-xs text-slate-300 space-y-4 leading-relaxed">
-                <p>
-                    Maison Clean utiliza cookies y/o tecnologías similares que almacenan y recuperan información cuando navega.
-                </p>
-
-                <h4 class="font-bold text-gold text-sm font-serif pt-2">1. Inventario de Cookies Utilizadas</h4>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse border border-gold/20 text-[11px] my-2">
-                        <thead>
-                            <tr class="bg-primary text-gold">
-                                <th class="p-2 border border-gold/20">Nombre</th>
-                                <th class="p-2 border border-gold/20">Proveedor</th>
-                                <th class="p-2 border border-gold/20">Finalidad</th>
-                                <th class="p-2 border border-gold/20">Duración</th>
-                                <th class="p-2 border border-gold/20">Tipo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-gold/10">
-                                <td class="p-2 border border-gold/10 font-mono">maison_clean_cookie_consent</td>
-                                <td class="p-2 border border-gold/10">Maison Clean (Propia)</td>
-                                <td class="p-2 border border-gold/10">Guardar el consentimiento de cookies.</td>
-                                <td class="p-2 border border-gold/10">1 año</td>
-                                <td class="p-2 border border-gold/10">Técnica (Necesaria)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <p>Maison Clean (Jaime Hernández Muela) utiliza cookies propias y técnicas para permitir el correcto funcionamiento y rendimiento de la web.</p>
             </div>
             <div class="p-4 border-t border-gold/20 bg-primary flex justify-end">
                 <button type="button" onclick="closeLegalModal('cookiesPolicyModal')" class="px-5 py-2 border border-gold/40 text-gold hover:bg-gold hover:text-primary transition-colors text-xs font-bold uppercase rounded-xl">
@@ -1122,19 +1070,11 @@
 
             applyConsent(consent) {
                 if (consent && consent.analytics) {
-                    this.loadAnalyticsScript();
+                    console.log('Maison Clean: Consentimiento de cookies analíticas activo.');
                 }
                 if (consent && consent.marketing) {
-                    this.loadMarketingScript();
+                    console.log('Maison Clean: Consentimiento de cookies publicitarias activo.');
                 }
-            },
-
-            loadAnalyticsScript() {
-                console.log('Maison Clean: Consentimiento de cookies analíticas activo.');
-            },
-
-            loadMarketingScript() {
-                console.log('Maison Clean: Consentimiento de cookies publicitarias activo.');
             },
 
             acceptAll() {
@@ -1329,7 +1269,7 @@
         window.addEventListener('scroll', revealOnScroll);
         revealOnScroll();
 
-        function handleFormSubmit(event) {
+        async function handleFormSubmit(event) {
             event.preventDefault();
 
             const privacyConsent = document.getElementById('privacyConsent');
