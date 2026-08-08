@@ -121,11 +121,20 @@
         .card-interactive:active {
             transform: translateY(-1px) scale(0.99);
         }
+        .legal-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .legal-scroll::-webkit-scrollbar-track {
+            background: #0B0C10;
+        }
+        .legal-scroll::-webkit-scrollbar-thumb {
+            background: #C5A059;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="bg-neutralBg text-slate-200 antialiased overflow-x-hidden">
 
-    <!-- Sticky Header / Navbar -->
     <header class="fixed top-0 left-0 w-full bg-primary/95 backdrop-blur-md border-b border-gold/20 shadow-xl z-50 transition-all duration-500 ease-in-out">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative py-2 sm:py-3 transition-all duration-500">
             
@@ -177,7 +186,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="inicio" class="relative pt-48 sm:pt-60 md:pt-72 lg:pt-80 pb-20 md:pb-28 bg-gradient-to-b from-primary via-primaryCard to-neutralBg overflow-hidden border-b border-gold/10">
         <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-gold/5 rounded-full filter blur-3xl -z-10"></div>
         <div class="absolute bottom-10 left-10 w-1/4 h-1/4 bg-gold/5 rounded-full filter blur-3xl -z-10"></div>
@@ -185,7 +193,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Texto Principal -->
                 <div class="lg:col-span-12 space-y-6 text-center max-w-4xl mx-auto">
                     <div class="inline-flex items-center space-x-2 bg-gold/10 text-gold px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide border border-gold/30">
                         <i class="fa-solid fa-location-dot text-gold"></i>
@@ -197,7 +204,6 @@
                         <span class="gold-gradient-text">Expertos en eliminación de ácaros</span>
                     </h1>
 
-                    <!-- Iconos visuales representativos -->
                     <div class="pt-2 pb-2 flex flex-wrap justify-center items-center gap-4 sm:gap-8">
                         <div class="flex items-center space-x-2 bg-primaryCard/90 border border-gold/30 px-4 py-2.5 rounded-xl shadow-md">
                             <i class="fa-solid fa-bed text-gold text-xl"></i>
@@ -233,7 +239,6 @@
         </div>
     </section>
 
-    <!-- Sección Carrusel Dinámico de Características de Valor -->
     <section id="carrusel-destacados" class="py-16 sm:py-20 bg-primaryCard/80 border-t border-b border-gold/25 relative overflow-hidden">
         <div class="absolute top-1/2 left-0 w-72 h-72 bg-gold/5 rounded-full filter blur-3xl -translate-y-1/2 pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -254,7 +259,7 @@
                     
                     <div id="carousel-slides" class="flex transition-transform duration-700 ease-out h-full">
                         
-                        <!-- Slide 1: Alfombras -->
+                        <!-- Slide 1 -->
                         <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-12 items-center p-6 sm:p-10 gap-6 sm:gap-8">
                             <div class="md:col-span-6 space-y-4 text-left">
                                 <span class="text-xs font-bold uppercase tracking-wider text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20 inline-block">
@@ -270,7 +275,7 @@
                             </div>
                         </div>
 
-                        <!-- Slide 2: Máquina más potente -->
+                        <!-- Slide 2 -->
                         <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-12 items-center p-6 sm:p-10 gap-6 sm:gap-8">
                             <div class="md:col-span-6 space-y-4 text-left">
                                 <span class="text-xs font-bold uppercase tracking-wider text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20 inline-block">
@@ -286,7 +291,7 @@
                             </div>
                         </div>
 
-                        <!-- Slide 3: Eliminamos ácaros + Botón a colchones -->
+                        <!-- Slide 3 -->
                         <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-12 items-center p-6 sm:p-10 gap-6 sm:gap-8">
                             <div class="md:col-span-6 space-y-4 text-left">
                                 <span class="text-xs font-bold uppercase tracking-wider text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20 inline-block">
@@ -308,7 +313,7 @@
                             </div>
                         </div>
 
-                        <!-- Slide 4: Productos patentados -->
+                        <!-- Slide 4 -->
                         <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-12 items-center p-6 sm:p-10 gap-6 sm:gap-8">
                             <div class="md:col-span-6 space-y-4 text-left">
                                 <span class="text-xs font-bold uppercase tracking-wider text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20 inline-block">
@@ -327,7 +332,6 @@
                     </div>
                 </div>
 
-                <!-- Botones Ant / Sig -->
                 <button id="carousel-prev-btn" class="absolute left-2 sm:-left-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primaryCard/90 border border-gold/40 text-gold hover:text-white hover:bg-gold hover:border-gold flex items-center justify-center transition-all active:scale-90 shadow-xl z-20" aria-label="Anterior">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
@@ -335,7 +339,6 @@
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
 
-                <!-- Paginación con Puntos -->
                 <div id="carousel-dots" class="flex justify-center items-center space-x-2 mt-6">
                     <button class="w-3 h-3 rounded-full bg-gold transition-all" aria-label="Diapositiva 1"></button>
                     <button class="w-3 h-3 rounded-full bg-slate-600 hover:bg-gold/50 transition-all" aria-label="Diapositiva 2"></button>
@@ -347,7 +350,6 @@
         </div>
     </section>
 
-    <!-- Sección Antes y Después Dinámica -->
     <section id="antes-despues" class="py-20 bg-neutralBg border-t border-b border-gold/20 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -475,14 +477,12 @@
         </div>
     </section>
 
-    <!-- Sección Por Qué Elegirnos -->
     <section id="nosotros" class="relative py-20 bg-gradient-to-b from-neutralBg via-slate-100 to-slate-100 text-slate-900 overflow-hidden">
         <div class="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-neutralBg to-transparent pointer-events-none z-10"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pt-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 
-                <!-- Lado Izquierdo: Beneficios y Ventajas -->
                 <div class="space-y-6">
                     <span class="text-xs uppercase tracking-widest font-extrabold text-amber-700 bg-amber-100/90 px-4 py-1.5 rounded-full border border-amber-300 inline-block shadow-sm">
                         <i class="fa-solid fa-crown mr-1 text-amber-600"></i> Nuestro As bajo la Manga
@@ -494,7 +494,6 @@
                         A diferencia de las empresas de limpieza tradicionales, contamos con <strong class="text-slate-950 font-extrabold">la tecnología más avanzada y con mayor poder de succión</strong>. Esto nos permite extraer ácaros, escamas de piel muerta y suciedad incrustada en las capas más profundas de tu mobiliario textil.
                     </p>
 
-                    <!-- Lista de características minimalistas -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                         <div class="flex items-center space-x-3 bg-white/90 p-3.5 rounded-xl shadow-md border border-slate-200 hover:border-amber-400 transition-all">
                             <div class="bg-amber-100 p-2.5 rounded-xl text-amber-700 border border-amber-300 flex-shrink-0">
@@ -503,7 +502,6 @@
                             <h4 class="font-extrabold text-slate-900 text-sm">Máxima Potencia del Mercado</h4>
                         </div>
 
-                        <!-- Tarjeta Resaltada: Prueba de 10 min -->
                         <div class="group flex flex-col space-y-2 bg-gradient-to-r from-amber-500/10 via-amber-100 to-amber-200/60 p-4 rounded-xl shadow-lg border-2 border-amber-500 hover:border-amber-600 transition-all transform hover:-translate-y-1">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center space-x-3">
@@ -542,7 +540,6 @@
                     </div>
                 </div>
 
-                <!-- Lado Derecho: Tarjeta de Garantía -->
                 <div class="reveal relative">
                     <div class="relative bg-primaryCard text-white p-8 rounded-2xl shadow-2xl border border-gold/40 gold-border-glow overflow-hidden card-interactive">
                         <div class="space-y-6">
@@ -575,7 +572,6 @@
         </div>
     </section>
 
-    <!-- Sección de Testimonios -->
     <section id="testimonios" class="py-20 bg-gradient-to-b from-slate-100 via-slate-50 to-neutralBg border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
@@ -588,7 +584,6 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- Testimonio 1 -->
                 <div class="reveal bg-white p-8 rounded-2xl shadow-lg border-2 border-slate-200 hover:border-gold hover:shadow-2xl hover:shadow-gold/20 hover:-translate-y-2 active:scale-95 transition-all duration-300 cursor-pointer group flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex text-amber-500 space-x-1 text-base group-hover:scale-110 transition-transform origin-left">
@@ -613,7 +608,6 @@
                     </div>
                 </div>
 
-                <!-- Testimonio 2 -->
                 <div class="reveal bg-white p-8 rounded-2xl shadow-lg border-2 border-slate-200 hover:border-gold hover:shadow-2xl hover:shadow-gold/20 hover:-translate-y-2 active:scale-95 transition-all duration-300 cursor-pointer group flex flex-col justify-between space-y-6" style="transition-delay: 150ms;">
                     <div class="space-y-4">
                         <div class="flex text-amber-500 space-x-1 text-base group-hover:scale-110 transition-transform origin-left">
@@ -638,7 +632,6 @@
                     </div>
                 </div>
 
-                <!-- Testimonio 3 -->
                 <div class="reveal bg-white p-8 rounded-2xl shadow-lg border-2 border-slate-200 hover:border-gold hover:shadow-2xl hover:shadow-gold/20 hover:-translate-y-2 active:scale-95 transition-all duration-300 cursor-pointer group flex flex-col justify-between space-y-6" style="transition-delay: 300ms;">
                     <div class="space-y-4">
                         <div class="flex text-amber-500 space-x-1 text-base group-hover:scale-110 transition-transform origin-left">
@@ -667,12 +660,10 @@
         </div>
     </section>
 
-    <!-- Sección Formulario de Contacto -->
     <section id="contacto" class="py-20 bg-primaryCard text-white relative border-t border-gold/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Información del Formulario -->
                 <div class="lg:col-span-5 space-y-6">
                     <span class="text-gold font-extrabold uppercase tracking-widest text-xs">Reserva tu cita hoy</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight font-serif">
@@ -698,25 +689,21 @@
                     </div>
                 </div>
 
-                <!-- Formulario -->
                 <div class="lg:col-span-7 bg-primary text-slate-100 p-6 sm:p-10 rounded-3xl shadow-2xl border border-gold/30 relative">
                     <h3 class="text-xl sm:text-2xl font-extrabold text-gold mb-6 font-serif">Cuestionario de Reserva</h3>
                     
                     <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
                         
-                        <!-- Nombre -->
                         <div>
                             <label for="fullName" class="block text-xs font-extrabold text-gold uppercase mb-2">Nombre y Apellidos *</label>
                             <input type="text" id="fullName" required class="w-full px-4 py-3 bg-primaryCard border border-gold/30 rounded-xl text-white focus:border-gold focus:outline-none transition-colors" placeholder="Ej: Francisco González">
                         </div>
 
-                        <!-- Zona / CP -->
                         <div>
                             <label for="location" class="block text-xs font-extrabold text-gold uppercase mb-2">¿Dónde vives en Madrid? (Zona/CP) *</label>
                             <input type="text" id="location" required class="w-full px-4 py-3 bg-primaryCard border border-gold/30 rounded-xl text-white focus:border-gold focus:outline-none transition-colors" placeholder="Ej: Las Rozas, CP 28230">
                         </div>
 
-                        <!-- Qué limpiar -->
                         <div>
                             <label for="serviceSelect" class="block text-xs font-extrabold text-gold uppercase mb-2">¿Qué necesitas limpiar? *</label>
                             <select id="serviceSelect" required class="w-full px-4 py-3 bg-primaryCard border border-gold/30 rounded-xl text-white focus:border-gold focus:outline-none transition-colors">
@@ -729,7 +716,6 @@
                             </select>
                         </div>
 
-                        <!-- Radio Buttons: Mascotas -->
                         <div>
                             <span class="block text-xs font-extrabold text-gold uppercase mb-2">¿Tienes perros o gatos en casa? *</span>
                             <div class="flex space-x-6">
@@ -744,7 +730,6 @@
                             </div>
                         </div>
 
-                        <!-- Radio Buttons: Propietario -->
                         <div>
                             <span class="block text-xs font-extrabold text-gold uppercase mb-2">¿Nos recibe el propietario de la casa? *</span>
                             <div class="flex space-x-6">
@@ -759,13 +744,30 @@
                             </div>
                         </div>
 
-                        <!-- Comentarios -->
                         <div>
                             <label for="comments" class="block text-xs font-extrabold text-gold uppercase mb-2">Mensaje / Comentarios adicionales</label>
                             <textarea id="comments" rows="3" class="w-full px-4 py-3 bg-primaryCard border border-gold/30 rounded-xl text-white focus:border-gold focus:outline-none transition-colors" placeholder="Cuéntanos si tienes alguna mancha difícil o especificaciones..."></textarea>
                         </div>
 
-                        <!-- Botón Enviar -->
+                        <!-- Capa Informativa RGPD -->
+                        <div class="p-4 bg-primaryCard/80 border border-gold/20 rounded-xl text-xs text-slate-300 space-y-2">
+                            <p class="font-bold text-gold uppercase tracking-wider text-[11px] mb-1">
+                                <i class="fa-solid fa-shield-halved mr-1"></i> Información básica sobre Protección de Datos
+                            </p>
+                            <p><strong>Responsable:</strong> Maison Clean / [Nombre o Razón Social del Titular]</p>
+                            <p><strong>Finalidad:</strong> Gestionar la solicitud de información y reserva de servicios a través de WhatsApp.</p>
+                            <p><strong>Legitimación:</strong> Consentimiento del interesado (art. 6.1.a RGPD).</p>
+                            <p><strong>Destinatarios:</strong> No se cederán datos a terceros, salvo obligación legal.</p>
+                            <p><strong>Derechos:</strong> Acceder, rectificar y suprimir los datos, explicados en la <button type="button" onclick="openLegalModal('privacyModal')" class="text-gold underline hover:text-goldLight">Política de Privacidad</button>.</p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 pt-1">
+                            <input type="checkbox" id="privacyConsent" required class="mt-1 h-4 w-4 text-gold rounded border-gold/30 bg-primaryCard focus:ring-gold">
+                            <label for="privacyConsent" class="text-xs text-slate-300 leading-snug cursor-pointer">
+                                He leído y acepto la <button type="button" onclick="openLegalModal('privacyModal')" class="text-gold underline hover:text-goldLight font-bold">Política de Privacidad</button> y doy mi consentimiento para el tratamiento de mis datos. *
+                            </label>
+                        </div>
+
                         <div class="pt-2">
                             <button type="submit" class="btn-interactive w-full py-4 bg-whatsapp hover:bg-emerald-600 text-white font-extrabold text-xs uppercase tracking-widest rounded-xl transition-all shadow-lg flex items-center justify-center space-x-2">
                                 <i class="fa-brands fa-whatsapp text-xl"></i>
@@ -774,7 +776,6 @@
                         </div>
                     </form>
 
-                    <!-- Modal de Confirmación Sutil -->
                     <div id="successModal" class="hidden absolute inset-0 bg-primaryCard rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-4 z-20 border border-gold/40">
                         <div class="w-16 h-16 bg-gold/20 text-gold rounded-full flex items-center justify-center text-3xl shadow-sm border border-gold/40">
                             <i class="fa-solid fa-circle-check"></i>
@@ -796,7 +797,6 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
     <footer class="bg-black text-slate-400 pt-16 pb-8 border-t border-gold/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             
@@ -808,14 +808,19 @@
                          onerror="this.onerror=null; this.src='https://placehold.co/500x200/0B0C10/C5A059?text=MAISON+CLEAN';">
                 </a>
                 
-                <!-- Instagram Highlight Box -->
-                <div class="bg-primaryCard p-4 rounded-xl border border-gold/30 space-y-2 text-left w-full mt-2">
-                    <a href="https://www.instagram.com/jimyus.business/?__pwa=1" target="_blank" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-goldLight transition-colors text-xs uppercase tracking-wider">
-                        <i class="fa-brands fa-instagram text-lg"></i>
-                        <span>Sigue a Jaime (jimyus)</span>
+                <!-- Cuadro Destacado Instagram -->
+                <div class="bg-primaryCard/90 p-4 rounded-2xl border border-gold/30 hover:border-gold/60 transition-all duration-300 space-y-3 text-left w-full mt-2 shadow-lg group/insta">
+                    <a href="https://www.instagram.com/jimyus.business/?__pwa=1" target="_blank" class="btn-interactive flex items-center justify-between w-full px-3.5 py-2.5 bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/40 hover:border-gold rounded-xl text-gold hover:text-goldLight transition-all">
+                        <div class="flex items-center space-x-2.5 min-w-0">
+                            <i class="fa-brands fa-instagram text-xl text-gold flex-shrink-0 group-hover/insta:scale-110 transition-transform"></i>
+                            <span class="text-xs sm:text-sm font-bold tracking-wide truncate">jimyus.business</span>
+                        </div>
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider bg-gold/20 text-goldLight px-2.5 py-1 rounded-full border border-gold/30 flex-shrink-0 ml-2">
+                            Ver Instagram
+                        </span>
                     </a>
-                    <p class="text-xs text-slate-300 leading-relaxed font-medium">
-                        En el Instagram de Jaime (jimyus) os vamos informando de todo día a día.
+                    <p class="text-xs text-slate-300 leading-relaxed font-medium px-1">
+                        Sigue a Jaime en <strong class="text-gold font-semibold">@jimyus.business</strong> para enterarte de todas las novedades día a día.
                     </p>
                 </div>
             </div>
@@ -831,29 +836,31 @@
                 </ul>
             </div>
 
-            <div class="space-y-4 md:col-span-2">
-                <h4 class="text-xs font-extrabold text-gold uppercase tracking-widest font-serif">Información de Contacto</h4>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                    <div class="space-y-2">
-                        <p class="flex items-center">
-                            <i class="fa-solid fa-phone text-gold mr-2"></i>
-                            <span>Teléfono / WhatsApp: <a href="tel:+34626809558" class="font-bold text-slate-200 hover:text-gold">+34 626 809 558</a></span>
-                        </p>
-                        <p class="flex items-center">
-                            <i class="fa-solid fa-location-dot text-gold mr-2"></i>
-                            <span>Servicio a domicilio en todo Madrid</span>
-                        </p>
-                    </div>
-                    <div class="space-y-2">
-                        <p class="flex items-center">
-                            <i class="fa-solid fa-clock text-gold mr-2"></i>
-                            <span>Atención: <strong>9:00 - 21:00</strong></span>
-                        </p>
-                        <p class="flex items-center">
-                            <i class="fa-solid fa-calendar-days text-gold mr-2"></i>
-                            <span>De Lunes a Domingo</span>
-                        </p>
-                    </div>
+            <div class="space-y-4">
+                <h4 class="text-xs font-extrabold text-gold uppercase tracking-widest font-serif">Información Legal</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><button type="button" onclick="openLegalModal('noticeModal')" class="hover:text-gold transition-colors text-left">Aviso Legal</button></li>
+                    <li><button type="button" onclick="openLegalModal('privacyModal')" class="hover:text-gold transition-colors text-left">Política de Privacidad</button></li>
+                    <li><button type="button" onclick="openLegalModal('cookiesPolicyModal')" class="hover:text-gold transition-colors text-left">Política de Cookies</button></li>
+                    <li><button type="button" onclick="CookieManager.showPreferencesModal()" class="text-gold font-bold hover:underline text-left flex items-center"><i class="fa-solid fa-cookie-bite mr-1.5"></i> Configurar Cookies</button></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-xs font-extrabold text-gold uppercase tracking-widest font-serif">Contacto</h4>
+                <div class="space-y-2 text-xs">
+                    <p class="flex items-center">
+                        <i class="fa-solid fa-phone text-gold mr-2"></i>
+                        <span>Teléfono / WhatsApp: <a href="tel:+34626809558" class="font-bold text-slate-200 hover:text-gold">+34 626 809 558</a></span>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fa-solid fa-location-dot text-gold mr-2"></i>
+                        <span>Servicio a domicilio en todo Madrid</span>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fa-solid fa-clock text-gold mr-2"></i>
+                        <span>Atención: <strong>9:00 - 21:00</strong> (L-D)</span>
+                    </p>
                 </div>
             </div>
 
@@ -864,7 +871,333 @@
         </div>
     </footer>
 
+    <div id="cookieBanner" class="hidden fixed bottom-4 left-4 right-4 md:left-8 md:right-auto md:max-w-xl bg-primaryCard border-2 border-gold/40 p-6 rounded-2xl shadow-2xl z-50 text-slate-200">
+        <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 gold-gradient-bg text-primary rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
+                    <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                <h3 class="text-base font-bold text-white font-serif">Gestión de Cookies y Privacidad</h3>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+                Utilizamos cookies propias y de terceros necesarias para permitir el funcionamiento técnico de la web. Además, con su consentimiento, podemos utilizar cookies analíticas y publicitarias para mejorar su experiencia y medir el uso del sitio.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-2 pt-2">
+                <button type="button" onclick="CookieManager.acceptAll()" class="btn-interactive px-4 py-2.5 gold-gradient-bg text-primary font-extrabold text-xs uppercase tracking-wider rounded-xl text-center shadow">
+                    Aceptar todas
+                </button>
+                <button type="button" onclick="CookieManager.rejectAll()" class="btn-interactive px-4 py-2.5 bg-neutralBg border border-gold/40 text-slate-300 hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl text-center">
+                    Rechazar opcionales
+                </button>
+                <button type="button" onclick="CookieManager.showPreferencesModal()" class="btn-interactive px-4 py-2.5 bg-primary border border-gold/20 text-gold hover:text-goldLight font-semibold text-xs uppercase tracking-wider rounded-xl text-center">
+                    Configurar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Configuración de Preferencias de Cookies -->
+    <div id="cookiePreferencesModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-primaryCard border border-gold/40 max-w-2xl w-full rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+            <div class="p-6 border-b border-gold/20 flex justify-between items-center bg-primary">
+                <h3 class="text-lg font-bold text-gold font-serif flex items-center">
+                    <i class="fa-solid fa-sliders mr-2"></i> Panel de Preferencias de Cookies
+                </h3>
+                <button type="button" onclick="CookieManager.closePreferencesModal()" class="text-slate-400 hover:text-white text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="p-6 space-y-6 overflow-y-auto legal-scroll text-xs text-slate-300">
+                <p class="text-slate-300 leading-relaxed">
+                    A continuación, puede personalizar las categorías de cookies que autoriza utilizar en nuestro sitio web. Las opciones guardadas se aplicarán de forma inmediata.
+                </p>
+
+                <div class="p-4 bg-primary rounded-xl border border-gold/20 space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-white text-sm">1. Cookies Estrictamente Necesarias</span>
+                        <span class="bg-gold/20 text-gold text-[10px] uppercase font-bold px-2 py-0.5 rounded-full border border-gold/30">Siempre Activas</span>
+                    </div>
+                    <p class="text-slate-400">
+                        Son aquellas indispensables para la navegación y el funcionamiento correcto de la página. No pueden desactivarse.
+                    </p>
+                </div>
+
+                <div class="p-4 bg-primary rounded-xl border border-gold/20 space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-white text-sm">2. Cookies Analíticas y de Medición</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="cookieAnalyticsToggle" class="sr-only peer">
+                            <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gold"></div>
+                        </label>
+                    </div>
+                    <p class="text-slate-400">
+                        Nos permiten cuantificar el número de usuarios y analizar estadísticamente la utilización que hacen del sitio web.
+                    </p>
+                </div>
+
+                <div class="p-4 bg-primary rounded-xl border border-gold/20 space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-white text-sm">3. Cookies Publicitarias y de Perfilado</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="cookieMarketingToggle" class="sr-only peer">
+                            <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gold"></div>
+                        </label>
+                    </div>
+                    <p class="text-slate-400">
+                        Permiten gestionar de la forma más eficaz posible la oferta de espacios publicitarios o guardar hábitos de navegación.
+                    </p>
+                </div>
+            </div>
+
+            <div class="p-4 border-t border-gold/20 bg-primary flex justify-end space-x-3">
+                <button type="button" onclick="CookieManager.saveCustomPreferences()" class="btn-interactive px-6 py-2.5 gold-gradient-bg text-primary font-bold text-xs uppercase tracking-wider rounded-xl shadow">
+                    Guardar Preferencias
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 1: Aviso Legal -->
+    <div id="noticeModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-primaryCard border border-gold/40 max-w-3xl w-full rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
+            <div class="p-6 border-b border-gold/20 flex justify-between items-center bg-primary">
+                <h3 class="text-lg font-bold text-gold font-serif">Aviso Legal y Condiciones de Uso</h3>
+                <button type="button" onclick="closeLegalModal('noticeModal')" class="text-slate-400 hover:text-white text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto legal-scroll text-xs text-slate-300 space-y-4 leading-relaxed">
+                <h4 class="font-bold text-gold text-sm font-serif">1. Datos Identificativos (LSSI-CE)</h4>
+                <p>
+                    En cumplimiento con el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se facilitan los siguientes datos identificativos:
+                </p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>Denominación Comercial:</strong> Maison Clean</li>
+                    <li><strong>Titular / Razón Social:</strong> [Nombre o Razón Social del Titular / Empresa]</li>
+                    <li><strong>NIF/CIF:</strong> [NIF/CIF del Titular]</li>
+                    <li><strong>Domicilio Social:</strong> [Dirección Postal Completa en Madrid, España]</li>
+                    <li><strong>Teléfono de contacto:</strong> +34 626 809 558</li>
+                    <li><strong>Correo electrónico:</strong> [Correo Electrónico de Contacto]</li>
+                </ul>
+
+                <h4 class="font-bold text-gold text-sm font-serif pt-2">2. Objeto y Ámbito de Aplicación</h4>
+                <p>
+                    El presente Aviso Legal regula el acceso, navegación y uso del sitio web de Maison Clean. La utilización del sitio web atribuye la condición de usuario e implica la aceptación plena de todas las disposiciones incluidas en este Aviso Legal.
+                </p>
+
+                <h4 class="font-bold text-gold text-sm font-serif pt-2">3. Propiedad Intelectual e Industrial</h4>
+                <p>
+                    Todos los contenidos de la web (textos, fotografías, gráficos, imágenes, iconos, tecnología, software, marcas, logotipos) son propiedad de Maison Clean o de sus licenciantes.
+                </p>
+            </div>
+            <div class="p-4 border-t border-gold/20 bg-primary flex justify-end">
+                <button type="button" onclick="closeLegalModal('noticeModal')" class="px-5 py-2 border border-gold/40 text-gold hover:bg-gold hover:text-primary transition-colors text-xs font-bold uppercase rounded-xl">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Política de Privacidad -->
+    <div id="privacyModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-primaryCard border border-gold/40 max-w-3xl w-full rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
+            <div class="p-6 border-b border-gold/20 flex justify-between items-center bg-primary">
+                <h3 class="text-lg font-bold text-gold font-serif">Política de Privacidad</h3>
+                <button type="button" onclick="closeLegalModal('privacyModal')" class="text-slate-400 hover:text-white text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto legal-scroll text-xs text-slate-300 space-y-4 leading-relaxed">
+                <p>
+                    De conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), le informamos sobre cómo tratamos sus datos personales en Maison Clean.
+                </p>
+
+                <h4 class="font-bold text-gold text-sm font-serif pt-2">1. Responsable del Tratamiento</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>Identidad:</strong> Maison Clean / [Nombre o Razón Social del Titular]</li>
+                    <li><strong>NIF/CIF:</strong> [NIF/CIF del Titular]</li>
+                    <li><strong>Dirección:</strong> [Dirección Postal Completa en Madrid, España]</li>
+                    <li><strong>Email de contacto de Privacidad:</strong> [Correo Electrónico de Contacto]</li>
+                </ul>
+
+                <h4 class="font-bold text-gold text-sm font-serif pt-2">2. Finalidad y Datos Tratados</h4>
+                <p>
+                    Tratamos la información proporcionada para atender solicitudes de presupuesto y gestionar la programación de servicios de limpieza a domicilio a través de WhatsApp.
+                </p>
+
+                <h4 class="font-bold text-gold text-sm font-serif pt-2">3. Legitimación del Tratamiento</h4>
+                <p>
+                    La base legal es el <strong>consentimiento expreso del interesado</strong> (artículo 6.1.a del RGPD), prestado al enviar la solicitud de reserva.
+                </p>
+
+                <h4 class="font-bold text-gold text-sm font-serif pt-2">4. Ejercicio de Derechos</h4>
+                <p>
+                    El usuario puede ejercer en cualquier momento sus derechos de <strong>Acceso, Rectificación, Supresión, Limitación, Oposición y Portabilidad</strong> dirigiendo un correo electrónico a <strong>[Correo Electrónico de Contacto]</strong>.
+                </p>
+            </div>
+            <div class="p-4 border-t border-gold/20 bg-primary flex justify-end">
+                <button type="button" onclick="closeLegalModal('privacyModal')" class="px-5 py-2 border border-gold/40 text-gold hover:bg-gold hover:text-primary transition-colors text-xs font-bold uppercase rounded-xl">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Política de Cookies -->
+    <div id="cookiesPolicyModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-primaryCard border border-gold/40 max-w-3xl w-full rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
+            <div class="p-6 border-b border-gold/20 flex justify-between items-center bg-primary">
+                <h3 class="text-lg font-bold text-gold font-serif">Política de Cookies</h3>
+                <button type="button" onclick="closeLegalModal('cookiesPolicyModal')" class="text-slate-400 hover:text-white text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto legal-scroll text-xs text-slate-300 space-y-4 leading-relaxed">
+                <p>
+                    Maison Clean utiliza cookies y/o tecnologías similares que almacenan y recuperan información cuando navega.
+                </p>
+
+                <h4 class="font-bold text-gold text-sm font-serif pt-2">1. Inventario de Cookies Utilizadas</h4>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-gold/20 text-[11px] my-2">
+                        <thead>
+                            <tr class="bg-primary text-gold">
+                                <th class="p-2 border border-gold/20">Nombre</th>
+                                <th class="p-2 border border-gold/20">Proveedor</th>
+                                <th class="p-2 border border-gold/20">Finalidad</th>
+                                <th class="p-2 border border-gold/20">Duración</th>
+                                <th class="p-2 border border-gold/20">Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gold/10">
+                                <td class="p-2 border border-gold/10 font-mono">maison_clean_cookie_consent</td>
+                                <td class="p-2 border border-gold/10">Maison Clean (Propia)</td>
+                                <td class="p-2 border border-gold/10">Guardar el consentimiento de cookies.</td>
+                                <td class="p-2 border border-gold/10">1 año</td>
+                                <td class="p-2 border border-gold/10">Técnica (Necesaria)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="p-4 border-t border-gold/20 bg-primary flex justify-end">
+                <button type="button" onclick="closeLegalModal('cookiesPolicyModal')" class="px-5 py-2 border border-gold/40 text-gold hover:bg-gold hover:text-primary transition-colors text-xs font-bold uppercase rounded-xl">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
+        const CookieManager = {
+            STORAGE_KEY: 'maison_clean_cookie_consent',
+
+            getConsent() {
+                try {
+                    const saved = localStorage.getItem(this.STORAGE_KEY);
+                    return saved ? JSON.parse(saved) : null;
+                } catch(e) {
+                    return null;
+                }
+            },
+
+            saveConsent(analytics, marketing) {
+                const consentData = {
+                    necessary: true,
+                    analytics: !!analytics,
+                    marketing: !!marketing,
+                    timestamp: new Date().toISOString()
+                };
+                try {
+                    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(consentData));
+                } catch(e) {}
+                
+                this.applyConsent(consentData);
+                this.hideBanner();
+                this.closePreferencesModal();
+            },
+
+            applyConsent(consent) {
+                if (consent && consent.analytics) {
+                    this.loadAnalyticsScript();
+                }
+                if (consent && consent.marketing) {
+                    this.loadMarketingScript();
+                }
+            },
+
+            loadAnalyticsScript() {
+                console.log('Maison Clean: Consentimiento de cookies analíticas activo.');
+            },
+
+            loadMarketingScript() {
+                console.log('Maison Clean: Consentimiento de cookies publicitarias activo.');
+            },
+
+            acceptAll() {
+                this.saveConsent(true, true);
+            },
+
+            rejectAll() {
+                this.saveConsent(false, false);
+            },
+
+            saveCustomPreferences() {
+                const analytics = document.getElementById('cookieAnalyticsToggle')?.checked || false;
+                const marketing = document.getElementById('cookieMarketingToggle')?.checked || false;
+                this.saveConsent(analytics, marketing);
+            },
+
+            showBanner() {
+                document.getElementById('cookieBanner')?.classList.remove('hidden');
+            },
+
+            hideBanner() {
+                document.getElementById('cookieBanner')?.classList.add('hidden');
+            },
+
+            showPreferencesModal() {
+                const consent = this.getConsent();
+                if (consent) {
+                    const analyticsToggle = document.getElementById('cookieAnalyticsToggle');
+                    const marketingToggle = document.getElementById('cookieMarketingToggle');
+                    if (analyticsToggle) analyticsToggle.checked = consent.analytics;
+                    if (marketingToggle) marketingToggle.checked = consent.marketing;
+                }
+                document.getElementById('cookiePreferencesModal')?.classList.remove('hidden');
+            },
+
+            closePreferencesModal() {
+                document.getElementById('cookiePreferencesModal')?.classList.add('hidden');
+            },
+
+            init() {
+                const consent = this.getConsent();
+                if (!consent) {
+                    this.showBanner();
+                } else {
+                    this.applyConsent(consent);
+                }
+            }
+        };
+
+        function openLegalModal(modalId) {
+            document.getElementById(modalId)?.classList.remove('hidden');
+        }
+
+        function closeLegalModal(modalId) {
+            document.getElementById(modalId)?.classList.add('hidden');
+        }
+
+        window.addEventListener('load', () => {
+            CookieManager.init();
+            initImageComparison();
+            initHighlightCarousel();
+        });
+
         function initImageComparison() {
             const containers = document.querySelectorAll('.img-comp-container');
             
@@ -925,10 +1258,7 @@
             });
         }
 
-        window.addEventListener('load', initImageComparison);
-
         const WHATSAPP_NUMBER = "34626809558";
-
         const header = document.querySelector('header');
         let isShrunk = false;
         let lastScrollY = window.scrollY;
@@ -1001,6 +1331,11 @@
 
         function handleFormSubmit(event) {
             event.preventDefault();
+
+            const privacyConsent = document.getElementById('privacyConsent');
+            if (!privacyConsent || !privacyConsent.checked) {
+                return;
+            }
 
             const name = document.getElementById('fullName').value.trim();
             const location = document.getElementById('location').value.trim();
@@ -1120,10 +1455,6 @@
             goToSlide(0);
             startAutoplay();
         }
-
-        window.addEventListener('load', () => {
-            initHighlightCarousel();
-        });
     </script>
 </body>
 </html>
